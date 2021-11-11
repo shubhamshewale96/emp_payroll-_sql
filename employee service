@@ -68,5 +68,13 @@ mysql> SELECT * FROM employee_payroll ;
 |  4 | reshma  | 24000.52 | 2021-09-09 |
 +----+---------+----------+------------+
 4 rows in set (0.00 sec)
+mysql> SELECT salary FROM employee_payroll WHERE name = 'shubham';
++----------+
+| salary   |
++----------+
+| 20000.21 |
++----------+
+1 row in set (0.00 sec)
+
 
 
