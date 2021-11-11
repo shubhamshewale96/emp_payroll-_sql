@@ -23,4 +23,24 @@ mysql> use payroll_services;
 ERROR 1049 (42000): Unknown database 'payroll_services'
 mysql> use payroll_servies;
 Database changed
-mysql> 
+mysql>
+mysql> CREATE TABLE employee_payroll (
+    -> id INT PRIMARY KEY,
+    -> name VARCHAR(20) NOT NULL,
+    -> salary DOUBLE NOT NULL,
+    -> start  DATE NOT NULL
+    -> );
+Query OK, 0 rows affected (1.69 sec)
+
+mysql> DESC employee_payroll;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | NO   | PRI | NULL    |       |
+| name   | varchar(20) | NO   |     | NULL    |       |
+| salary | double      | NO   |     | NULL    |       |
+| start  | date        | NO   |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql>
