@@ -76,5 +76,42 @@ mysql> SELECT salary FROM employee_payroll WHERE name = 'shubham';
 +----------+
 1 row in set (0.00 sec)
 
+mysql> ALTER TABLE employee_payroll ADD gender VARCHAR(1) NOT NULL after name;
+Query OK, 0 rows affected (2.16 sec)
+Records: 0  Duplicates: 0  Warnings: 0
 
+mysql> UPDATE employee_payroll set gender = 'm' where name = 'shubham' or name ='rohit';
+Query OK, 2 rows affected (0.92 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> SELECT * FROM employee_payroll 
+    -> /c
+    -> \c
+mysql> SELECT * FROM employee_payroll;
++----+---------+--------+----------+------------+
+| id | name    | gender | salary   | start      |
++----+---------+--------+----------+------------+
+|  1 | shubham | m      | 20000.21 | 2021-05-09 |
+|  2 | rohit   | m      | 25000.16 | 2021-07-09 |
+|  3 | ankita  |        |  23000.1 | 2021-08-09 |
+|  4 | reshma  |        | 24000.52 | 2021-09-09 |
++----+---------+--------+----------+------------+
+4 rows in set (0.00 sec)
+
+mysql> UPDATE employee_payroll set gender = 'f' where name = 'reshma' or name ='ankita';
+Query OK, 2 rows affected (1.67 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> SELECT * FROM employee_payroll;
++----+---------+--------+----------+------------+
+| id | name    | gender | salary   | start      |
++----+---------+--------+----------+------------+
+|  1 | shubham | m      | 20000.21 | 2021-05-09 |
+|  2 | rohit   | m      | 25000.16 | 2021-07-09 |
+|  3 | ankita  | f      |  23000.1 | 2021-08-09 |
+|  4 | reshma  | f      | 24000.52 | 2021-09-09 |
++----+---------+--------+----------+------------+
+4 rows in set (0.00 sec)
+
+mysql> 
 
