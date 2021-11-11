@@ -1,0 +1,26 @@
+
+mysql> CREATE DATABASE payroll_servies;
+Query OK, 1 row affected (1.91 sec)
+
+mysql> show databases
+    -> \c
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| classicmodels      |
+| information_schema |
+| mysql              |
+| payroll_service    |
+| payroll_servies    |
+| performance_schema |
+| sys                |
+| testdb             |
++--------------------+
+8 rows in set (0.00 sec)
+
+mysql> use payroll_services;
+ERROR 1049 (42000): Unknown database 'payroll_services'
+mysql> use payroll_servies;
+Database changed
+mysql> 
